@@ -1,0 +1,55 @@
+#Rock, Paper, Scissors Python Game
+import random
+choices = ["R", "P", "S"]
+
+def get_choice(input):
+  if input == "R":
+    return "Rock"
+  elif input == "S":
+    return "Scissors"
+  elif input == "P":
+    return "Paper"
+  else:
+    return " "
+
+#to start the game print('Rock, Paper, Scissors - Shoot!')
+while (1 < 2):
+    print ("\n")
+print('[R]= Rock, [P] = Paper,[S] = Scissors and [Q] = Quit\n')
+counter = 1
+while True:
+    print('Game '+str(counter)+':')
+    print('Please choose a letter:')
+    user_choice = input()
+  
+#Check if the user wants to Quit the game, if they do then exit the game
+    if user_choice == "Q":
+        print('Thanks for playing !')
+    break;
+  #Allow the computer to randomly select one of the choices.
+  
+userChoice = input("Choose your weapon [R]ock], [P]aper, or [S]cissors: ")
+if not re.match("[SsRrPp]", userChoice):
+        print ('Please choose a letter:')
+        print('[R]= Rock, [P] = Paper,[S] = Scissors and [Q] = Quit\n')
+        
+    #Echo the user's choice
+print('You chose '+get_choice(user_choice)+' the computer chose '+get_choice(computer_choice))
+if user_choice == "R" and computer_choice == "S":
+     print('You win, Rock beats Scissors')
+elif user_choice == "P" and computer_choice == "R":
+     print('You win, Paper beats Rock')
+elif user_choice == "S" and computer_choice == "P":
+     print('You win, Scissors beats Paper')
+elif user_choice == "R" and computer_choice == "P":
+     print('Computer wins, Paper beats Rock')
+elif user_choice == "P" and computer_choice == "S":
+     print('Computer wins, Scissors beats Paper')
+elif user_choice == "S" and computer_choice == "R":
+     print('Computer wins, Rock beats Scissors')
+elif user_choice == computer_choice:
+    print('It is a tie !')
+else:
+    print('Please enter either [R], [P],[S] or [Q]')
+counter = counter + 1
+print('\n')
